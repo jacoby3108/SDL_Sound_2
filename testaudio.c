@@ -10,8 +10,8 @@
 #include <stdlib.h>
 #include "libaudio.h"
 
-//char AudioFile[]="./Sound/red.wav";
-char AudioFile[]="Avicii - Wake Me Up .wav";
+char AudioFile[]="./Sound/red.wav";
+//char AudioFile[]="Avicii - Wake Me Up .wav";
 void do_something(void);
 
 void main(void) 
@@ -48,7 +48,7 @@ void main(void)
 	
 }
 
-#define PLAY_TIME 50
+#define PLAY_TIME 5
 
 void do_something(void)
 {

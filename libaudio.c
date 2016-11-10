@@ -9,7 +9,7 @@
 static void my_audio_callback(void *userdata, Uint8 *stream, int len);
 // variable declarations
 static Uint8 *audio_pos;           // global pointer to the audio buffer to be played
-static Uint32 audio_len=0;  // remaining length of the sample we have to play. Initial value must be <> 0 !!
+static Uint32 audio_len=0;         // remaining length of the sample we have to play. Initial value must be 0 !!
 
 static Uint32 wav_length;          // length of our sample
 static Uint8 *wav_buffer;          // buffer containing our audio file
@@ -22,6 +22,17 @@ static int inside_callback=0;
 ** Sound Driver by dany
 */
 
+//**************** For PI Board **************************************
+
+gcc simple1.c libaudio.c  -L./SDL/Library/ -lSDL -o simple1  (w/o libaudio precompiled)
+
+
+
+
+
+
+
+//**************** For PC **************************************
 // Next function is a TEST BENCH for Quick tests 
 // As stand alone put your test code here and rename main1 to main
 // gcc libaudio.c -I/usr/local/include -L/usr/local/lib -lSDL -o libaudio
@@ -30,6 +41,8 @@ static int inside_callback=0;
 // As library rename main as main1 and link this file with your App (testaudio.c)
 // gcc testaudio.c libaudio.c -I/usr/local/include -L/usr/local/lib -lSDL -lpthread -o testaudio
 // Run with ./testaudio
+
+
 
 
 int main1(int argc, char* argv[]){
