@@ -35,3 +35,5 @@
 # Sound Files
 *.wav
 *.WAV
+
+Sound/
